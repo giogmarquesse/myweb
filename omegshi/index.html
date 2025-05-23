@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omegle Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="main-container" aria-label="Omegle Clone Chat Application">
+        <section class="video-section" aria-label="Video Chat">
+            <video id="localVideo" class="video-box" autoplay muted playsinline aria-label="Your video"></video>
+            <video id="remoteVideo" class="video-box" autoplay playsinline aria-label="Stranger's video"></video>
+        </section>
+        <section class="chat-section" aria-label="Text Chat">
+            <div id="chat-window" class="chat-window" aria-live="polite">
+                <div id="messages"></div>
+            </div>
+            <form id="message-form" autocomplete="off" aria-label="Send a message">
+                <input type="text" id="message-input" placeholder="Type your message..." aria-label="Message input" required />
+                <button type="submit" id="send-btn" aria-label="Send message">Send</button>
+            </form>
+            <div class="controls">
+                <button id="start-chat" aria-label="Start Chat">Start Chat</button>
+                <button id="end-chat" disabled aria-label="End Chat">End Chat</button>
+            </div>
+            <div id="status" class="status" aria-live="polite"></div>
+        </section>
+    </main>
+    <script src="js/chat.js"></script>
+</body>
+</html> 
